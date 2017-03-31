@@ -1,0 +1,24 @@
+{
+  "name": "jenkins-pusher-wemo",
+  "version": "1.0.0",
+  "description": "Accept pusher messages published from Jenkins; updates WeMo outlet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benridge/jenkins-pusher-wemo.git"
+  },
+  "author": "Ben Ridge",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/benridge/jenkins-pusher-wemo/issues"
+  },
+  "homepage": "https://github.com/benridge/jenkins-pusher-wemo#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "pusher": "^1.5.1",
+    "pusher-client": "^1.1.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "pusher": {
+    "appKey": "df83e15d6e43275cc118",
+    "channels": ["churro"]
+  },
+  "wemo": {
+
+  }
+}

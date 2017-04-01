@@ -4,6 +4,8 @@
     "channels": ["churro"]
   },
   "wemo": {
-
+    "outlet": {
+      "url": "http://10.0.1.47:49153/setup.xml"
+    } 
   }
 }

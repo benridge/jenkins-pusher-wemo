@@ -32,7 +32,7 @@ class WemoHandler {
   }
 
   onConnect(deviceInfo) {
-    console.log('Wemo Device Found: %j', deviceInfo);
+    console.log('Wemo Device Found: %j', deviceInfo.friendlyName);
 
     this.stopTryingToConnect();
 
@@ -44,15 +44,23 @@ class WemoHandler {
 
     // Handle BinaryState events
     this.client.on('binaryState', (value) => {
-      console.log('Binary State changed to: %s', value);
+      console.log('WeMo outlet turned ', value === "0" ? 'off' : 'on');
     });
   }
 
   toggle() {
     this.client.getBinaryState((error, state) => {
       console.log('Binary state toggling from: ', state);
-      this.client.setBinaryState(state === "0" ? "1": "0");
+      this.client.setBinaryState(state === "0" ? this.turnOn() : this.turnOff());
     });
+  }
+
+  turnOn() {
+    this.client.setBinaryState("1");
+  }
+
+  turnOff() {
+    this.client.setBinaryState("0");
   }
 }
 
